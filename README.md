@@ -1,22 +1,4 @@
 
-# 📂 Folder structure
-
-jenkins-shared-library/
-│
-├── vars/
-│   ├── buildApp.groovy
-│   ├── sonarScan.groovy
-│   ├── dockerBuildAndPush.groovy
-│   ├── deployToK8s.groovy
-│   └── notifySlack.groovy
-│
-├── src/org/devops/utils/
-│   ├── Helper.groovy
-│
-└── resources/
-    └── templates/
-
-
 # 1️⃣ vars/buildApp.groovy
 
 Used for Maven or Node.js build logic.
@@ -202,7 +184,7 @@ tells Jenkins:
 
 So — Jenkins dynamically links your Jenkinsfile ↔ shared library repo.
 
-![alt text](image.png)
+
 
 So when your Jenkinsfile says:
 
@@ -213,4 +195,3 @@ Jenkins internally looks for:
 📄 /vars/buildApp.groovy inside the shared library  
 and executes the call() method defined there.
 
-![alt text](image-1.png)
