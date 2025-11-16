@@ -20,9 +20,11 @@ pipeline {
 
         stage('Deploy container') {
             steps {
-                sh "docker run -d -p 8082:8081 ${FULL_IMAGE}"
+                script {
+                    dockerUtil.deployContainer(env.FULL_IMAGE, "8084:8081"}
             }
         }
 
     }
 }
+
