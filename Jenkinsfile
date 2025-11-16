@@ -1,3 +1,4 @@
+@Library('my-library')_
 pipeline {
     agent any
     
@@ -20,4 +21,5 @@ pipeline {
         }
     }
 }
+
 
