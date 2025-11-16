@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Docker build') {
             steps {
-                sh 'docker build -t ${FULL_IMAGE} .'
+                dockerUtil.dockerImageBuild(env.FULL_IMAGE)  
             }
         }
          stage('Deploy container') {
@@ -20,3 +20,4 @@ pipeline {
         }
     }
 }
+
