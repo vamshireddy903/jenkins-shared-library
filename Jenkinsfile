@@ -24,7 +24,8 @@ pipeline {
                     dockerUtil.deployContainer(env.FULL_IMAGE, "8084:8081"}
             }
         }
-
+      }
     }
 }
+
 
